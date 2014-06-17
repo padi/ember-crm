@@ -80,4 +80,9 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # Ember mode:
+  # :development - not minified, allows for logging
+  # :production - not minified, allows for logging
+  config.ember.variant = :production
 end
