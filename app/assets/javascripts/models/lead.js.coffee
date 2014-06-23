@@ -9,3 +9,10 @@ App.Lead = DS.Model.extend
   fullName: ( ->
     "#{@get('firstName')} #{@get('lastName')}"
   ).property('firstName', 'lastName')
+
+  showUnsavedMessage: ( ->
+    @get('isDirty') and !@get('isSaving')
+  ).property('isDirty', 'isSaving')
+
+App.Lead.reopenClass
+  STATUSES: ['new', 'in progress', 'closed', 'bad']
