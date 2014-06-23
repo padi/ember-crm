@@ -4,4 +4,5 @@ App.Router.map ()->
   location: 'auto'
   rootUrl: '/'
 
-  @resource 'leads', path: '/'
+  @resource 'leads', path: '/', ->
+    @resource 'lead', path: '/leads/:id'
