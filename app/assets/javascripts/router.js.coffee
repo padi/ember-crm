@@ -3,8 +3,8 @@ App.Router.reopen
   location: 'auto'
   rootUrl: '/'
 
-App.Router.map ()->
-
+App.Router.map ->
   @resource 'leads', path: '/', ->
+    @route 'new'
     @resource 'lead', path: '/leads/:id', ->
       @route 'edit'
