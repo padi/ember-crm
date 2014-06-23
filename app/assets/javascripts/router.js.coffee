@@ -3,3 +3,5 @@
 App.Router.map ()->
   location: 'auto'
   rootUrl: '/'
+
+  @resource 'leads', path: '/'
